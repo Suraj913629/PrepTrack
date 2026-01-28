@@ -23,10 +23,9 @@ connectDB();
 
 const app = express();
 
-const corsOrigin = process.env.CORS_ORIGIN || 'http://localhost:5173';
 app.use(
   cors({
-    origin: corsOrigin.split(',').map((o) => o.trim()),
+    origin: true,
     credentials: true,
   })
 );
